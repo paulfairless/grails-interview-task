@@ -1,0 +1,26 @@
+Article
+	-> image Url
+	-> intro
+	-> last updated
+	-> body text
+	-> news type [breaking, normal]
+	-> comments
+
+Comments
+	-> text
+	-> date
+
+
+As an Editor I would like to highlight breaking news
+
+-> news can be of type breaking, new, normal, archived
+-> the homepage highlights breaking news with a yellow "breaking news" banner
+
+As a user i would like to recommend a comments that i like
+-> user can recommend a comment
+-> comments with recommendations appear above comments without recommendations
+-> comments display their number of recommendations
+
+As an Editor I would like to remove comments I view to be inappropriate
+-> inappropriate comments can be removed by an editor
+-> comments should not be permanently deleted deleted
