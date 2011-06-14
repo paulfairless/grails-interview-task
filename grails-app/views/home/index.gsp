@@ -13,6 +13,13 @@
                 <p>${article.intro}</p>
                 <img src="${article.imageUrl}"/>
                 <p>${article.bodyText}</p>
+                <section>
+                    <ul>
+                        <g:each in="${article.comments}" var="comment">
+                        <li>${comment.commentText}</li>
+                        </g:each>
+                    </ul>
+                </section>
             </article>
         </li>
         </g:each>
