@@ -13,5 +13,9 @@ class Article {
 
 
     static constraints = {
+        headline(blank:false)
+        intro(blank:false)
+        imageUrl(blank:false)
+        bodyText(blank:false)
     }
 }

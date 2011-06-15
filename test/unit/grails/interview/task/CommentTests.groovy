@@ -11,7 +11,18 @@ class CommentTests extends GrailsUnitTestCase {
         super.tearDown()
     }
 
-    void testSomething() {
+    void testCommentTextIsMandatory() {
+        def dummyArticle =  new Article([headline:'dummy'])
+        mockForConstraintsTests(Comment)
+        mockDomain(Article, [dummyArticle])
 
+        def comment = new Comment(article: dummyArticle)
+        assertFalse comment.validate()
+
+        comment = new Comment(commentText: '', article: dummyArticle)
+        assertFalse comment.validate()
+
+        comment = new Comment(commentText: 'comment', article: dummyArticle)
+        assertTrue comment.validate()
     }
 }

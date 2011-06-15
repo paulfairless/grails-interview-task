@@ -7,5 +7,6 @@ class Comment {
     static belongsTo = [ article: Article ]
 
     static constraints = {
+        commentText(blank:false)
     }
 }
